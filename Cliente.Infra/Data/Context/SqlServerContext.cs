@@ -14,10 +14,8 @@ namespace Cliente.Infra.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Setting a primary key in OurHero model
             modelBuilder.Entity<Client>().HasKey(x => x.Id);
 
-            // Inserting record in OurHero table
             modelBuilder.Entity<Client>().HasData(
                 new Client
                 {

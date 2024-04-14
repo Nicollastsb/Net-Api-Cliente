@@ -30,9 +30,7 @@ namespace Test_Api_Cliente
                 Observation = "observação teste",
             };
 
-            // Act
             var result = _baseService.Add<ClienteValidator>(cliente);
-            // Assert
             Assert.IsType<Client>(result);
         }
 
@@ -129,7 +127,6 @@ namespace Test_Api_Cliente
         [Theory, MemberData(nameof(Data))]
         public void Add_Invalid_Cliente(Client newCliente)
         {
-            // Assert
             Assert.Throws<FluentValidation.ValidationException>(() => _baseService.Add<ClienteValidator>(newCliente));
         }
 

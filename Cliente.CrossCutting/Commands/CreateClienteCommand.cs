@@ -6,8 +6,6 @@ namespace Cliente.CrossCutting.Commands
 {
     public class CreateClienteCommand : IRequest<ClienteDTO>
     {
-        //[Required]
-        //public Guid Id { get; set; }
         [Required]
         public string Nome { get; set; }
         [Required]

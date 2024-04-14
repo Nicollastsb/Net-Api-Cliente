@@ -84,7 +84,6 @@ namespace Test_Api_Cliente
         {
             if (!_baseFake.Exists(item => item.Id == id))
                 throw new KeyNotFoundException();
-            //Método sem retorno
         }
         public IList<TEntity> GetAll()
         {
